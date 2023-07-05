@@ -1,0 +1,75 @@
+---
+import ProjectCard from './ProjectCard.astro'
+---
+
+<section>
+  <div class="section-divider" aria-hidden="true">Projets</div>
+  <div class="container">
+    <div class="space-content animate">
+      <h2>Voici quelques uns de mes projets !</h2>
+      <p>Les projets suivants que j'ai réalisés sont développés avec React, technologie sur laquelle j'améliore mes connaissances et compétences  avec TypeScript. Ceux-ci sont hébergés sur Firebase.</p>
+      
+      <p><a class="fancy-link" href="https://github.com/daocam">Plus de projets sur GitHub</a>.</p>
+    </div>
+    <div class="projects animate">
+      <ProjectCard 
+        url="https://react-pokemon-app-483f4.web.app"
+        title="Pokédex"
+        description="L'application Pokédex utilise l'API Pokémon pour afficher des images de différentes espèces de Pokémon. Le projet a été créé avec React, Vite, TypeScript et Materialize."
+        tags={['React', 'TypeScript', 'Vite', 'Materialize']}
+      />
+      <ProjectCard 
+        url="https://react-memory-card-1a62c.web.app"
+        title="Memory Card"
+        description="Il s'agit d'un jeu de mémoire simple qui compte les mouvements et utilise localStorage pour sauvegarder le meilleur score. Le projet a été créé avec React, Vite, TypeScript et Sass."
+        tags={['React', 'Typescript', 'Vite', 'Sass']}
+      />
+      <ProjectCard 
+        url="https://react-shopping-cart-25c27.web.app"
+        title="Shopping cart"
+        description="C'est une vitrine avec un panier d'achat qui utilise localStorage pour enregistrer les produits ajouté au panier en actualisant le montant total de celui-ci. Le projet a été créer avec React. Ceci est un projet d'OpenClassrooms."
+        tags={['React', 'JavaScript']}
+      />
+      <ProjectCard 
+        url="https://github.com/daocam/daocam.github.io"
+        title="Personal Portfolio"
+        description="C'est mon portfolio développé avec Astro.js et SASS."
+        tags={['Astro', 'SASS']}
+      />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .projects {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .projects::after {
+    content: '';
+    position: absolute;
+    width: 276px;
+    height: 252px;
+    background-repeat: no-repeat;
+    bottom: -230px;
+    left: -100px;
+    background-image: url('/dotgrid-projects.png');
+  }
+</style>

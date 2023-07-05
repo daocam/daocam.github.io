@@ -1,0 +1,99 @@
+---
+import { Icon } from 'astro-icon';
+
+const skills = [
+  {
+    icon: 'simple-icons:react',
+    label: 'React'
+  },
+  {
+    icon: 'simple-icons:typescript',
+    label: 'TypeScript'
+  },
+  {
+    icon: 'simple-icons:sass',
+    label: 'SASS'
+  },
+  {
+    icon: 'simple-icons:tailwindcss',
+    label: 'Tailwind CSS'
+  },
+  {
+    icon: 'simple-icons:php',
+    label: 'PHP'
+  },
+  {
+    icon: 'simple-icons:laravel',
+    label: 'Laravel'
+  }
+]
+---
+
+<section>
+  <div class="section-divider" aria-hidden="true">Compétences</div>
+  <div class="container">
+    <div class="space-content animate">
+      <h2>Voici mes compétences</h2>
+      <p>En tant que développeur web, je suis passionné par la conception des sites et applications. Je m'applique à maintenir et améliorer mes compétences de base en développement web, notamment en HTML, CSS et JavaScript. Ces connaissances fondamentales me permettent d'apprendre facilement les différents frameworks JavaScript. Actuellement, je suis particulièrement enthousiasmé par React.js et Astro.js. J'utilise des outils tels que SASS ou Tailwind CSS pour la mise en page, et j'explore des sujets avancés tels que Next.js et TypeScript.</p>
+    </div>
+    <div class="skills animate">
+      {
+        skills.map(skill => (
+          <div class="skill-item">
+            <div class="skill-item__label">
+              <Icon name={skill.icon} aria-hidden="true" />
+            </div>
+            <p>{skill.label}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @use '../assets/scss/base/size' as *;
+
+  section {
+    margin-top: 20vh;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .skill-item {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    .skill-item__label [astro-icon] {
+      width: 2.5rem;
+      height: 2.5rem;
+      max-width: none;
+      color: lightslategrey;
+    }
+
+    p {
+      margin-bottom: 0.25rem;
+      color: var(--neutral-100);
+      @include size-18;
+    }
+  }
+</style>

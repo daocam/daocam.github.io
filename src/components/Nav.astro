@@ -1,0 +1,62 @@
+---
+const menuitems = [
+  {
+    label: 'Compétences',
+    href: '#skills',
+  },
+  {
+    label: 'Projets',
+    href: '#projects'
+  },
+  {
+    label: 'À propos',
+    href: '#about'
+  },
+  {
+    label: 'Contact',
+    href: '#contact'
+  }
+]
+---
+
+<div>
+  {
+    menuitems.map(item => (
+      <a href={item.href}>{item.label}</a>
+    ))
+  }
+</div>
+
+<style>
+  div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: solid 3px transparent;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  a::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-image: transparent;
+  }
+
+  a:hover::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-image: var(--color-gradient);
+  }
+</style>
