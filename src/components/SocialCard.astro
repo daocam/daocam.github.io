@@ -10,7 +10,7 @@ const {
 } = Astro.props
 ---
 
-<a href={url} class="social-card">
+<a href={url} target="_blank" class="social-card">
   <div class="social-card__platform">
     { hasSVG === true ? <slot /> : <Icon name={icon} /> }
     <h3>{platform}</h3>
