@@ -3,14 +3,11 @@ import { Icon } from "astro-icon";
 ---
 
 <div class="rainbow-button">
-  <a 
-    href="../assets/docs/cv-camara_daouda-dw.pdf"
-    download="cv-daouda-camara"
-  >
+  <a href="cv-daouda_camara.pdf" download="cv-daouda-camara">
     <div class="wrapper">
       <span>
-        <Icon  class="icon-download" name="mdi:download" /> 
-        Téléchargez mon CV
+        <Icon class="icon-download" name="mdi:download" />
+         Téléchargez mon CV
       </span>
     </div>
   </a>
@@ -42,7 +39,14 @@ import { Icon } from "astro-icon";
     left: 0;
     width: 200%;
     height: 100%;
-    background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    background: linear-gradient(
+      115deg,
+      #4fcf70,
+      #fad648,
+      #a767e5,
+      #12bcfe,
+      #44ce7b
+    );
     background-size: auto;
     background-size: 50% 100%;
   }
@@ -51,11 +55,11 @@ import { Icon } from "astro-icon";
   a:focus::before {
     animation: rainbow-effect 1s linear infinite;
   }
-  
+
   .wrapper {
     position: relative;
     z-index: 2;
-    padding: .875rem 1.5rem;
+    padding: 0.875rem 1.5rem;
     font-size: 1.1rem;
     align-items: center;
     background-color: rgb(var(--support-color-dark));
@@ -70,7 +74,7 @@ import { Icon } from "astro-icon";
   .wrapper [astro-icon] {
     width: 2rem;
     height: 2rem;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
   span {
