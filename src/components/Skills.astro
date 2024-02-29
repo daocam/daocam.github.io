@@ -1,28 +1,36 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 const skills = [
   {
-    icon: 'simple-icons:react',
-    label: 'React'
+    icon: "simple-icons:nextdotjs",
+    label: "Next.js",
   },
   {
-    icon: 'simple-icons:typescript',
-    label: 'TypeScript'
+    icon: "simple-icons:react",
+    label: "React",
   },
   {
-    icon: 'simple-icons:nodejs',
-    label: 'Node.js'
+    icon: "simple-icons:typescript",
+    label: "TypeScript",
   },
   {
-    icon: 'simple-icons:sass',
-    label: 'SASS'
+    icon: "simple-icons:nodejs",
+    label: "Node.js",
   },
   {
-    icon: 'simple-icons:tailwindcss',
-    label: 'Tailwind CSS'
-  }
-]
+    icon: "simple-icons:supabase",
+    label: "Supabase",
+  },
+  {
+    icon: "simple-icons:postgresql",
+    label: "PostgreSQL",
+  },
+  {
+    icon: "simple-icons:tailwindcss",
+    label: "Tailwind CSS",
+  },
+];
 ---
 
 <section>
@@ -30,11 +38,16 @@ const skills = [
   <div class="container">
     <div class="space-content animate">
       <h2>Voici mes compétences</h2>
-      <p>En tant que développeur web, je suis passionné par la conception d'interfaces pour les sites et applications. Je m'applique à maintenir et améliorer mes compétences de base en développement web, notamment en HTML, CSS et JavaScript. Ces connaissances fondamentales me permettent d'apprendre facilement les différents frameworks JavaScript. Actuellement, je suis particulièrement enthousiasmé par React.js avec Next.js. J'utilise des outils tels que SASS ou Tailwind CSS pour la mise en page, et j'explore des sujets avancés tels que TypeScript.</p>
+      <p>
+        En tant que développeur web, je suis passionné par la conception
+        d'interfaces utilisateurs pour les sites et applications web. Je
+        m'applique à améliorer mes compétences de base en développement web,
+        notamment avec les outils et technologies suivantes :
+      </p>
     </div>
     <div class="skills animate">
       {
-        skills.map(skill => (
+        skills.map((skill) => (
           <div class="skill-item">
             <div class="skill-item__label">
               <Icon name={skill.icon} aria-hidden="true" />
@@ -48,7 +61,7 @@ const skills = [
 </section>
 
 <style lang="scss">
-  @use '../assets/scss/base/size' as *;
+  @use "../assets/scss/base/size" as *;
 
   section {
     margin-top: 20vh;

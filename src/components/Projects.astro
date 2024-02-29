@@ -1,5 +1,5 @@
 ---
-import ProjectCard from './ProjectCard.astro'
+import ProjectCard from "./ProjectCard.astro";
 ---
 
 <section>
@@ -7,34 +7,50 @@ import ProjectCard from './ProjectCard.astro'
   <div class="container">
     <div class="space-content animate">
       <h2>Voici quelques uns de mes projets !</h2>
-      <p>Les projets suivants que j'ai réalisés sont développés avec React, technologie sur laquelle j'améliore mes connaissances et compétences avec TypeScript. Ceux-ci sont hébergés sur Firebase.</p>
-      
-      <p><a class="fancy-link" href="https://github.com/daocam">Plus de projets sur GitHub</a>.</p>
+      <p>
+        Les projets suivants que j'ai réalisés sont développés avec React et
+        Next.js, technologies sur lesquelles j'améliore mes connaissances et
+        compétences avec TypeScript.
+      </p>
+
+      <p>
+        <a class="fancy-link" href="https://github.com/daocam"
+          >Plus de projets sur GitHub</a
+        >.
+      </p>
     </div>
     <div class="projects animate">
-      <ProjectCard 
+      <ProjectCard
         url="https://react-pokemon-app-483f4.web.app"
         title="Pokédex"
         description="L'application Pokédex utilise l'API Pokémon pour afficher des images de différentes espèces de Pokémon. Le projet a été créé avec React, Vite, TypeScript et Materialize."
-        tags={['React', 'TypeScript', 'Vite', 'Materialize']}
+        tags={["React", "TypeScript", "Vite"]}
       />
-      <ProjectCard 
+      <ProjectCard
         url="https://react-memory-card-1a62c.web.app"
         title="Memory Card"
         description="Il s'agit d'un jeu de mémoire simple qui compte les mouvements et utilise localStorage pour sauvegarder le meilleur score. Le projet a été créé avec React, Vite, TypeScript et Sass."
-        tags={['React', 'Typescript', 'Vite', 'Sass']}
+        tags={["React", "Typescript", "Vite", "Sass"]}
       />
-      <ProjectCard 
+      <ProjectCard
         url="https://react-shopping-cart-25c27.web.app"
         title="Shopping cart"
         description="C'est une vitrine avec un panier d'achat qui utilise localStorage pour enregistrer les produits ajouté au panier en actualisant le montant total de celui-ci. Le projet a été créer avec React. Ceci est un projet d'OpenClassrooms."
-        tags={['React', 'JavaScript']}
+        tags={["React", "JavaScript"]}
       />
-      <ProjectCard 
-        url="https://react-apart.netlify.app"
-        title="Apart"
-        description="Il d'un site de vitrine inspirée par Airbnb. Le contenu des pages est géré dynamiquement avec un fichier JSON, et les images sont hébergées sur AWS. Le projet est développe avec Vite, React, TypeScript et Tailwind CSS."
-        tags={['React', 'TypeScript', 'Vite', 'Tailwind CSS']}
+      <ProjectCard
+        url="https://rent-ease-ecru.vercel.app"
+        title="Airbnb Clone"
+        description="Il d'un clone de Airbnb. IL est possible de créer un compte, réserver un logement et créer une offre de location. Le projet est développe avec Vite, React, Next.js, TypeScript, PostgreSQL, Supabase et Tailwind CSS."
+        tags={[
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "Supabase",
+          "PostgreSQL",
+        ]}
       />
     </div>
   </div>
@@ -63,13 +79,13 @@ import ProjectCard from './ProjectCard.astro'
   }
 
   .projects::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 276px;
     height: 252px;
     background-repeat: no-repeat;
     bottom: -230px;
     left: -100px;
-    background-image: url('/dotgrid-projects.png');
+    background-image: url("/dotgrid-projects.png");
   }
 </style>
